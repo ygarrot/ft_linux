@@ -1,5 +1,6 @@
-mkdir -v build
-cd       build
+source ../globale.sh
+
+change_to_build
 
 ../configure --prefix=/tools            \
              --with-sysroot=$LFS        \
@@ -7,13 +8,11 @@ cd       build
              --target=$LFS_TGT          \
              --disable-nls              \
              --disable-werror
-             
+
 make
-             
+
 case $(uname -m) in
   x86_64) mkdir -v /tools/lib && ln -sv lib /tools/lib64 ;;
 esac
 
 make install
-
-#5.4. Binutils-2.31.1 - Pass 1

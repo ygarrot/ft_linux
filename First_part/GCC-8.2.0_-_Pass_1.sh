@@ -1,3 +1,5 @@
+source ../globale.sh
+
 tar -xf ../mpfr-4.0.1.tar.xz
 mv -v mpfr-4.0.1 mpfr
 tar -xf ../gmp-6.1.2.tar.xz
@@ -25,8 +27,7 @@ case $(uname -m) in
  ;;
 esac
 
-mkdir -v build
-cd       build
+change_to_build
 
 ../configure                                       \
     --target=$LFS_TGT                              \
@@ -50,7 +51,5 @@ cd       build
     --disable-libvtv                               \
     --disable-libstdcxx                            \
     --enable-languages=c,c++
-    
-    make
-    
-    make install
+
+make_both

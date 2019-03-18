@@ -2,6 +2,7 @@ cd unix
 ./configure --prefix=/tools
 
 make
+
 TZ=UTC make test
 
 make install

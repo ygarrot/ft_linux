@@ -1,6 +1,8 @@
+source ../globale.sh
+
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include-fixed/limits.h
-  
+
 for file in gcc/config/{linux,i386/linux{,64}}.h
 do
   cp -uv $file{,.orig}
@@ -28,8 +30,7 @@ mv -v gmp-6.1.2 gmp
 tar -xf ../mpc-1.1.0.tar.gz
 mv -v mpc-1.1.0 mpc
 
-mkdir -v build
-cd       build
+change_to_build
 
 CC=$LFS_TGT-gcc                                    \
 CXX=$LFS_TGT-g++                                   \
@@ -44,14 +45,9 @@ RANLIB=$LFS_TGT-ranlib                             \
     --disable-multilib                             \
     --disable-bootstrap                            \
     --disable-libgomp
- 
-make
-make install
+
+make_both
 
 ln -sv gcc /tools/bin/cc
 
-echo 'int main(){}' > dummy.c
-cc dummy.c
-readelf -l a.out | grep ': /tools'
-
-rm -v dummy.c a.out
+unit_test1

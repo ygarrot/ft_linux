@@ -1,5 +1,6 @@
-mkdir -v build
-cd       build
+source ../globale.sh
+
+change_to_build
 
 CC=$LFS_TGT-gcc                \
 AR=$LFS_TGT-ar                 \
@@ -10,10 +11,8 @@ RANLIB=$LFS_TGT-ranlib         \
     --disable-werror           \
     --with-lib-path=/tools/lib \
     --with-sysroot
-    
-make
 
-make install
+make_both()
 
 make -C ld clean
 make -C ld LIB_PATH=/usr/lib:/lib
