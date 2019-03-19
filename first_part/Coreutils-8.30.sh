@@ -3,7 +3,7 @@
 ./configure --prefix=/tools --enable-install-program=hostname
 # The meaning of the configure options:
 
---enable-install-program=hostname
+#--enable-install-program=hostname
 # This enables the hostname binary to be built and installed – it is disabled by default but is required by the Perl test suite.
 
 # Compile the package:
