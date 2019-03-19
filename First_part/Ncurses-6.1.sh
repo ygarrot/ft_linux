@@ -25,6 +25,6 @@ sed -i s/mawk// configure
 make
 # This package has a test suite, but it can only be run after the package has been installed. The tests reside in the test/ directory. See the README file in that directory for further details.
 
-Install the package:
+# Install the package:
 
 make install
