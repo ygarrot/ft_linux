@@ -6,7 +6,7 @@
 make
 # To test the results, issue:
 
-make check
+make check TESTSUITEFLAGS=-j4
 # This takes a long time, about 3.5 SBUs. In addition, several tests are skipped that use Automake. For full test coverage, Autoconf can be re-tested after Automake has been installed. In addition, two tests fail due to changes in libtool-2.4.3 and later.
 
 # [Note] Note

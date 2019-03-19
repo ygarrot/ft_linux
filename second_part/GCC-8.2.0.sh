@@ -13,7 +13,7 @@ rm -f /usr/lib/gcc
 
 mkdir -v build
 cd       build
-Prepare GCC for compilation:
+# Prepare GCC for compilation:
 
 SED=sed                               \
 ../configure --prefix=/usr            \

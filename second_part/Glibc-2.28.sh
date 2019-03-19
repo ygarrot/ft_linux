@@ -161,13 +161,13 @@ zic -d $ZONEINFO -p America/New_York
 unset ZONEINFO
 The meaning of the zic commands:
 
-zic -L /dev/null ...
+# zic -L /dev/null ...
 # This creates posix time zones, without any leap seconds. It is conventional to put these in both zoneinfo and zoneinfo/posix. It is necessary to put the POSIX time zones in zoneinfo, otherwise various test-suites will report errors. On an embedded system, where space is tight and you do not intend to ever update the time zones, you could save 1.9MB by not using the posix directory, but some applications or test-suites might produce some failures.
 
-zic -L leapseconds ...
+# zic -L leapseconds ...
 # This creates right time zones, including leap seconds. On an embedded system, where space is tight and you do not intend to ever update the time zones, or care about the correct time, you could save 1.9MB by omitting the right directory.
 
-zic ... -p ...
+# zic ... -p ...
 # This creates the posixrules file. We use New York because POSIX requires the daylight savings time rules to be in accordance with US rules.
 
 # One way to determine the local time zone is to run the following script:
@@ -178,6 +178,7 @@ tzselect
 # Then create the /etc/localtime file by running:
 
 cp -v /usr/share/zoneinfo/<xxx> /etc/localtime
+# cp -v /usr/share/zoneinfo/<xxx> /etc/localtime
 # Replace <xxx> with the name of the time zone selected (e.g., Canada/Eastern).
 
 # 6.9.2.3. Configuring the Dynamic Loader
