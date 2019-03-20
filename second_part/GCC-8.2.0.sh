@@ -90,9 +90,9 @@ readelf -l a.out | grep ': /lib'
 grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
 # The output of the last command should be:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crt1.o succeeded
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crti.o succeeded
-/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crtn.o succeeded
+# /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crt1.o succeeded
+# /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crti.o succeeded
+# /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib/crtn.o succeeded
 # Depending on your machine architecture, the above may differ slightly, the difference usually being the name of the directory after /usr/lib/gcc. The important thing to look for here is that gcc has found all three crt*.o files under the /usr/lib directory.
 
 # Verify that the compiler is searching for the correct header files:
@@ -101,10 +101,10 @@ grep -B4 '^ /usr/include' dummy.log
 # This command should return the following output:
 
 #include <...> search starts here:
- /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
- /usr/local/include
- /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed
- /usr/include
+ # /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include
+ # /usr/local/include
+ # /usr/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed
+ # /usr/include
 # Again, note that the directory named after your target triplet may be different than the above, depending on your architecture.
 
 # Next, verify that the new linker is being used with the correct search paths:
@@ -112,24 +112,24 @@ grep -B4 '^ /usr/include' dummy.log
 grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
 # References to paths that have components with '-linux-gnu' should be ignored, but otherwise the output of the last command should be:
 
-SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")
-SEARCH_DIR("/usr/local/lib64")
-SEARCH_DIR("/lib64")
-SEARCH_DIR("/usr/lib64")
-SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")
-SEARCH_DIR("/usr/local/lib")
-SEARCH_DIR("/lib")
-SEARCH_DIR("/usr/lib");
-# A 32-bit system may see a few different directories. For example, here is the output from an i686 machine:
+# SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")
+# SEARCH_DIR("/usr/local/lib64")
+# SEARCH_DIR("/lib64")
+# SEARCH_DIR("/usr/lib64")
+# SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")
+# SEARCH_DIR("/usr/local/lib")
+# SEARCH_DIR("/lib")
+# SEARCH_DIR("/usr/lib");
+# # A 32-bit system may see a few different directories. For example, here is the output from an i686 machine:
 
-SEARCH_DIR("/usr/i686-pc-linux-gnu/lib32")
-SEARCH_DIR("/usr/local/lib32")
-SEARCH_DIR("/lib32")
-SEARCH_DIR("/usr/lib32")
-SEARCH_DIR("/usr/i686-pc-linux-gnu/lib")
-SEARCH_DIR("/usr/local/lib")
-SEARCH_DIR("/lib")
-SEARCH_DIR("/usr/lib");
+# SEARCH_DIR("/usr/i686-pc-linux-gnu/lib32")
+# SEARCH_DIR("/usr/local/lib32")
+# SEARCH_DIR("/lib32")
+# SEARCH_DIR("/usr/lib32")
+# SEARCH_DIR("/usr/i686-pc-linux-gnu/lib")
+# SEARCH_DIR("/usr/local/lib")
+# SEARCH_DIR("/lib")
+# SEARCH_DIR("/usr/lib");
 # Next make sure that we're using the correct libc:
 
 grep "/lib.*/libc.so.6 " dummy.log

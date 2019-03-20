@@ -3,7 +3,7 @@
 sed -i '5481,5485 s/({/(\\{/' tp/Texinfo/Parser.pm
 # Prepare Texinfo for compilation:
 
-# ./configure --prefix=/usr --disable-static
+ ./configure --prefix=/usr --disable-static
 # The meaning of the configure options:
 
 # --disable-static

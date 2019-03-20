@@ -20,4 +20,4 @@ make
 make check
 # Install the package:
 
-Make install
+make install
