@@ -44,7 +44,7 @@ cd       build
 # Compile the package:
 
 make
-Install the package:
+# Install the package:
 
 make install
 # [Caution] Caution
@@ -64,4 +64,4 @@ readelf -l a.out | grep ': /tools'
 
 rm -v dummy.c a.out
 # [Note] Note
-# Building Binutils in the section after next will serve as an additional check that the toolchain has been built properly. If Binutils fails to build, it is an indication that something has gone wrong with the previous Binutils, GCC, or Glibc installations.
+h Building Binutils in the section after next will serve as an additional check that the toolchain has been built properly. If Binutils fails to build, it is an indication that something has gone wrong with the previous Binutils, GCC, or Glibc installations.

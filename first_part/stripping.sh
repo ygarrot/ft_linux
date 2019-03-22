@@ -9,7 +9,7 @@ strip --strip-debug /tools/lib/*
 # To save more, remove the documentation:
 
 rm -rf /tools/{,share}/{info,manoc}
-Remove unneeded files:
+# Remove unneeded files:
 
 find /tools/{lib,libexec} -name \*ḹa -delete
 # At this point, you should have at least 3 GB of free space in $LFS that can be used to build and install Glibc and Gcc in the next phase. If you can build and install Glibc, you can build and install the rest too.

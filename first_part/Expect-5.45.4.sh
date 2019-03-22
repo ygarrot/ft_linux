@@ -23,7 +23,7 @@ make
 make test
 # Note that the Expect test suite is known to experience failures under certain host conditions that are not within our control. Therefore, test suite failures here are not surprising and are not considered critical.
 
-Install the package:
+# Install the package:
 
 make SCRIPTS="" install
 # The meaning of the make parameter:
