@@ -8,7 +8,7 @@
 # Compile the package:
 
 make
-# The Acl tests need to be run on a filesystem that supports access controls after Coreutils has been built with the Acl libraries. If desired, return to this package and run make check after Coreutils has been built later in this chapter.
+# The Acl tests need to be run on a filesystem that supports access controls after Coreutils has been built with the Acl libraries. If desired, return to this package and run [ "$TESTING" == "True" ] && make check after Coreutils has been built later in this chapter.
 
 # Install the package:
 

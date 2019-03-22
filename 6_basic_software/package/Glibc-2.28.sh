@@ -56,7 +56,7 @@ make
 
 # Generally a few tests do not pass. The test failures listed below are usually safe to ignore.
 
-make check
+[ "$TESTING" == "True" ] && make check
 # You may see some test failures. The Glibc test suite is somewhat dependent on the host system. This is a list of the most common issues seen for some versions of LFS:
 
 # misc/tst-ttyname is known to fail in the LFS chroot environment.

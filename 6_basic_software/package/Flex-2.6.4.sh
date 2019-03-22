@@ -10,7 +10,7 @@ HELP2MAN=/tools/bin/true \
 make
 # To test the results (about 0.5 SBU), issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

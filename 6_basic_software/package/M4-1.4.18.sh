@@ -2,7 +2,7 @@
 
 sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c
 echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
-# Prepare Gzip for compilation:
+# Prepare M4 for compilation:
 
 ./configure --prefix=/usr
 # Compile the package:
@@ -10,12 +10,7 @@ echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
 make
 # To test the results, issue:
 
-make check
-# Two tests are known to fail in the LFS environment: help-version and zmore.
-
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install
-# Move a program that needs to be on the root filesystem:
-
-mv -v /usr/bin/gzip /bin

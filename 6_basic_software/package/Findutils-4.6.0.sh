@@ -19,7 +19,7 @@ echo "#define _IO_IN_BACKUP 0x100" >> gl/lib/stdio-impl.h
 make
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

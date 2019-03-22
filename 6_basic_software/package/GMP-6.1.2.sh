@@ -30,7 +30,7 @@ make html
 
 # Test the results:
 
-make check 2>&1 | tee gmp-check-log
+[ "$TESTING" == "True" ] && make check 2>&1 | tee gmp-check-log
 # [Caution] Caution
 # The code in gmp is highly optimized for the processor where it is built. Occasionally, the code that detects the processor misidentifies the system capabilities and there will be errors in the tests or other applications using the gmp libraries with the message "Illegal instruction". In this case, gmp should be reconfigured with the option --build=x86_64-unknown-linux-gnu and rebuilt.
 

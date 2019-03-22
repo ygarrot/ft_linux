@@ -6,7 +6,7 @@
 make
 # Compilation is now complete. To run the Check test suite, issue the following command:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Note that the Check test suite may take a relatively long (up to 4 SBU) time.
 
 # Install the package and fix a script:

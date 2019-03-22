@@ -16,7 +16,7 @@ sed -e '/AppData/{N;N;p;s/\.appdata\./.metainfo./}' \
 make
 # To test the results (this takes a long time, around 3 SBUs), issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

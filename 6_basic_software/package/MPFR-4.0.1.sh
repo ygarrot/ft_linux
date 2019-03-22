@@ -13,7 +13,7 @@ make html
 
 # Test the results and ensure that all tests passed:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package and its documentation:
 
 make install

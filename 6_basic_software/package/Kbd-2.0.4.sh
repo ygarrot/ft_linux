@@ -20,7 +20,7 @@ PKG_CONFIG_PATH=/tools/lib/pkgconfig ./configure --prefix=/usr --disable-vlock
 make
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

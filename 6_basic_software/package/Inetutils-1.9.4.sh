@@ -28,7 +28,7 @@
 make
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # [Note] Note
 # One test, libls.sh, may fail in the initial chroot environment but will pass if the test is rerun after the LFS system is complete. One test, ping-localhost.sh, will fail if the host system does not have ipv6 capability.
 
