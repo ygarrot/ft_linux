@@ -1,5 +1,5 @@
 #!/bin/bash
-TAR=`cat alltar`
+SOURCES=$LFS/sources
 
 FIRST_COMPIL=(
 "Binutils-2.31.1_-_Pass_1.sh:binutils-2.31.1.tar.xz"
@@ -111,11 +111,12 @@ SECOND_COMPIL=(
 for package in "${FIRST_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"
+	FOLDER=${TAR%.*.*}
 	echo $SCRIPT = $TAR
 	# VERSION=${SCRIPT##*-}
 	# PACKAGE=${SCRIPT%-*}
 	# tar -xf $TAR
-	# cd $TAR
-	# sh $SCRIPT:::	# cd $SOURCES
-	# rm -rf $TAR
+	# cd $FOLDER
+	# sh $SCRIPT
+	# rm -rf $FOLDER
 done
