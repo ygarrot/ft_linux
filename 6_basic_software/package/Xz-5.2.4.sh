@@ -8,7 +8,7 @@
 make
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package and make sure that all essential files are in the correct directory:
 
 make install

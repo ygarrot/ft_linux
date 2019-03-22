@@ -1,3 +1,4 @@
+#WARNING
 # Prepare Bash for compilation:
 
 ./configure --prefix=/usr                       \

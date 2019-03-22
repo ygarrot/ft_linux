@@ -6,7 +6,7 @@ perl Makefile.PL
 make
 # To test the results, issue:
 
-make test
+[ "$TESTING" == "True" ] && make test
 # Install the package:
 
 make install

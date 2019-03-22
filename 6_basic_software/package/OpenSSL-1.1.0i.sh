@@ -10,7 +10,7 @@
 make
 # To test the results, issue:
 
-make test
+[ "$TESTING" == "True" ] && make test
 # One subtest in the test 40-test_rehash.t fails in the lfs chroot environment, but passes when run as a regular user.
 
 # Install the package:

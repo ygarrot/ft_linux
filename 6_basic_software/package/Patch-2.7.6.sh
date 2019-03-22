@@ -6,7 +6,7 @@
 make
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

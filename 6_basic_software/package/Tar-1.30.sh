@@ -13,7 +13,7 @@ FORCE_UNSAFE_CONFIGURE=1  \
 make
 # To test the results (about 3 SBU), issue:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # One test, link mismatch, is known to fail.
 
 # Install the package:

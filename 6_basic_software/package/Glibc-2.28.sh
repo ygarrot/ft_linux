@@ -159,7 +159,7 @@ done
 cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
 zic -d $ZONEINFO -p America/New_York
 unset ZONEINFO
-The meaning of the zic commands:
+# The meaning of the zic commands:
 
 # zic -L /dev/null ...
 # This creates posix time zones, without any leap seconds. It is conventional to put these in both zoneinfo and zoneinfo/posix. It is necessary to put the POSIX time zones in zoneinfo, otherwise various test-suites will report errors. On an embedded system, where space is tight and you do not intend to ever update the time zones, you could save 1.9MB by not using the posix directory, but some applications or test-suites might produce some failures.

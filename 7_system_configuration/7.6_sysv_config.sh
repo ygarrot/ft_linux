@@ -142,51 +142,8 @@ EOF
 cat > /etc/sysconfig/console << "EOF"
 # Begin /etc/sysconfig/console
 
-KEYMAP="pl2"
-FONT="lat2a-16 -m 8859-2"
-
-# End /etc/sysconfig/console
-EOF
-# As mentioned above, it is sometimes necessary to adjust a stock keymap slightly. The following example adds the Euro symbol to the German keymap:
-
-cat > /etc/sysconfig/console << "EOF"
-# Begin /etc/sysconfig/console
-
-KEYMAP="de-latin1"
-KEYMAP_CORRECTIONS="euro2"
-FONT="lat0-16 -m 8859-15"
-
-# End /etc/sysconfig/console
-EOF
-# The following is a Unicode-enabled example for Bulgarian, where a stock UTF-8 keymap exists:
-
-cat > /etc/sysconfig/console << "EOF"
-# Begin /etc/sysconfig/console
-
 UNICODE="1"
-KEYMAP="bg_bds-utf8"
-FONT="LatArCyrHeb-16"
-
-# End /etc/sysconfig/console
-EOF
-# Due to the use of a 512-glyph LatArCyrHeb-16 font in the previous example, bright colors are no longer available on the Linux console unless a framebuffer is used. If one wants to have bright colors without framebuffer and can live without characters not belonging to his language, it is still possible to use a language-specific 256-glyph font, as illustrated below:
-
-cat > /etc/sysconfig/console << "EOF"
-# Begin /etc/sysconfig/console
-
-UNICODE="1"
-KEYMAP="bg_bds-utf8"
-FONT="cyr-sun16"
-
-# End /etc/sysconfig/console
-EOF
-# The following example illustrates keymap autoconversion from ISO-8859-15 to UTF-8 and enabling dead keys in Unicode mode:
-
-cat > /etc/sysconfig/console << "EOF"
-# Begin /etc/sysconfig/console
-
-UNICODE="1"
-KEYMAP="de-latin1"
+KEYMAP="us"
 KEYMAP_CORRECTIONS="euro2"
 LEGACY_CHARSET="iso-8859-15"
 FONT="LatArCyrHeb-16 -m 8859-15"

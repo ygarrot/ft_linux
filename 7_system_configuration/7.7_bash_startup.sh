@@ -25,16 +25,16 @@
 locale -a
 # Charmaps can have a number of aliases, e.g., “ISO-8859-1” is also referred to as “iso8859-1” and “iso88591”. Some applications cannot handle the various synonyms correctly (e.g., require that “UTF-8” is written as “UTF-8”, not “utf8”), so it is safest in most cases to choose the canonical name for a particular locale. To determine the canonical name, run the following command, where <locale name> is the output given by locale -a for your preferred locale (“en_GB.iso88591” in our example).
 
-LC_ALL=<locale name> locale charmap
+LC_ALL=en_US locale charmap
 # For the “en_GB.iso88591” locale, the above command will print:
 
 ISO-8859-1
 # This results in a final locale setting of “en_GB.ISO-8859-1”. It is important that the locale found using the heuristic above is tested prior to it being added to the Bash startup files:
 
-LC_ALL=<locale name> locale language
-LC_ALL=<locale name> locale charmap
-LC_ALL=<locale name> locale int_curr_symbol
-LC_ALL=<locale name> locale int_prefix
+LC_ALL=en_US locale language
+LC_ALL=en_US locale charmap
+LC_ALL=en_US locale int_curr_symbol
+LC_ALL=en_US locale int_prefix
 # The above commands should print the language name, the character encoding used by the locale, the local currency, and the prefix to dial before the telephone number in order to get into the country. If any of the commands above fail with a message similar to the one shown below, this means that your locale was either not installed in Chapter 6 or is not supported by the default installation of Glibc.
 
 # locale: Cannot set LC_* to default locale: No such file or directory
@@ -52,7 +52,8 @@ LC_ALL=<locale name> locale int_prefix
 cat > /etc/profile << "EOF"
 # Begin /etc/profile
 
-export LANG=<ll>_<CC>.<charmap><@modifiers>
+export LANG=C
+export LANG=en_US.UTF-8
 
 # End /etc/profile
 EOF

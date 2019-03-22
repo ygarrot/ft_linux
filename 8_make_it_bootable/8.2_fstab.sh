@@ -1,3 +1,4 @@
+#warning
 # The /etc/fstab file is used by some programs to determine where file systems are to be mounted by default, in which order, and which must be checked (for integrity errors) prior to mounting. Create a new file systems table like this:
 
 cat > /etc/fstab << "EOF"
@@ -6,8 +7,10 @@ cat > /etc/fstab << "EOF"
 # file system  mount-point  type     options             dump  fsck
 #                                                              order
 
-/dev/<xxx>     /            <fff>    defaults            1     1
-/dev/<yyy>     swap         swap     pri=1               0     0
+/dev/sdb3      /            ext4     defaults            0     1
+/dev/sdb1      /boot        ext4     defaults            0     2
+/dev/sdb2      none         swap     pri=1               0     0
+/dev/sdb4      /home        ext4     defaults            0     2
 proc           /proc        proc     nosuid,noexec,nodev 0     0
 sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
 devpts         /dev/pts     devpts   gid=5,mode=620      0     0
