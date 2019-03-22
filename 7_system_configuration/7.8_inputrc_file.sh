@@ -1,3 +1,4 @@
+#!/bin/bash
 # nputrc file is the configuration file for the Readline library, which provides editing capabilities while the user is entering a line from the terminal. It works by tranlating keyboard inputs into specific actions. Readline is used by Bash and most other shells as well as many other applications.
 
 # Most people do not need user-specific functionality so the command below creates a global /etc/inputrc used by everyone who logs in. If you later decide you need to override the defaults on a per-user basis, you can create a .inputrc file in the user's home directory with the modified mappings.

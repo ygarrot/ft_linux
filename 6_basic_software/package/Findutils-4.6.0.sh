@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, suppress a test which on some machines can loop forever:
 
 sed -i 's/test-lock..EXEEXT.//' tests/Makefile.in

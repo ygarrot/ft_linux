@@ -1,3 +1,4 @@
+#!/bin/bash
 # This section is optional. If the intended user is not a programmer and does not plan to do any debugging on the system software, the system size can be decreased by about 90 MB by removing the debugging symbols from binaries and libraries. This causes no inconvenience other than not being able to debug the software fully anymore.
 
 # Most people who use the commands mentioned below do not experience any difficulties. However, it is easy to make a typo and render the new system unusable, so before running the strip commands, it is a good idea to make a backup of the LFS system in its current state.

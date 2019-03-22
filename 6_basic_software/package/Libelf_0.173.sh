@@ -1,3 +1,4 @@
+#!/bin/bash
 # Libelf is part of elfutils-0.173 package. Use the elfutils-0.173.tar.xz as the source tarball.
 
 # Prepare Libelf for compilation:

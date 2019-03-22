@@ -1,3 +1,4 @@
+#!/bin/bash
 # 7.6.1. How Do the System V Bootscripts Work?
 # Linux uses a special booting facility named SysVinit that is based on a concept of run-levels. It can be quite different from one system to another, so it cannot be assumed that because things worked in one particular Linux distribution, they should work the same in LFS too. LFS has its own way of doing things, but it respects generally accepted standards.
 

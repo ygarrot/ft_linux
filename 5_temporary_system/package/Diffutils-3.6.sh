@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Diffutils for compilation:
 
 ./configure --prefix=/tools

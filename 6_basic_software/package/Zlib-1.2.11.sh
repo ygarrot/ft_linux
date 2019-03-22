@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Zlib for compilation:
 
 ./configure --prefix=/usr

@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare GRUB for compilation:
 
 ./configure --prefix=/usr          \

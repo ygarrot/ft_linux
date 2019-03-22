@@ -1,3 +1,4 @@
+#!/bin/bash
 # 6.73.1. FHS compliance notes
 # The FHS recommends using the /var/lib/hwclock directory instead of the usual /etc directory as the location for the adjtime file. First create a directory to enable storage for the hwclock program:
 

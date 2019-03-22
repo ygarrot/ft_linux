@@ -1,3 +1,4 @@
+#!/bin/bash
 # First fix a problem with the regression tests in the LFS environment:
 
 sed -i 's|usr/bin/env |bin/|' run.sh.in

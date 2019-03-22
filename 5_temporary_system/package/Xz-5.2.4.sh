@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Xz for compilation:
 
 ./configure --prefix=/tools

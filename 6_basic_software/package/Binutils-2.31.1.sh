@@ -1,3 +1,4 @@
+#!/bin/bash
 # Verify that the PTYs are working properly inside the chroot environment by performing a simple test:
 
 expect -c "spawn ls"

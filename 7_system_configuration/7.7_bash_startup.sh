@@ -1,3 +1,4 @@
+#!/bin/bash
 # The shell program /bin/bash (hereafter referred to as “the shell”) uses a collection of startup files to help create an environment to run in. Each file has a specific use and may affect login and interactive environments differently. The files in the /etc directory provide global settings. If an equivalent file exists in the home directory, it may override the global settings.
 
 # An interactive login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file. An interactive non-login shell is started at the command-line (e.g., [prompt]$/bin/bash). A non-interactive shell is usually present when a shell script is running. It is non-interactive because it is processing a script and not waiting for user input between commands.

@@ -1,3 +1,4 @@
+#!/bin/bash
 # Modify the Makefile to install headers into the standard /usr/include directory instead of /usr/lib/libffi-3.2.1/include.
 
 sed -e '/^includesdir/ s/$(libdir).*$/$(includedir)/' \

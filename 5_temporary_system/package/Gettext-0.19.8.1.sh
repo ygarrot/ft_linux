@@ -1,3 +1,4 @@
+#!/bin/bash
 # For our temporary set of tools, we only need to build and install three programs from Gettext.
 
 # Prepare Gettext for compilation:

@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, fix problems that causes a segmentation fault under some conditions in klogd and fix an obsolete program construct:
 
 sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c

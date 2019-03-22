@@ -1,3 +1,4 @@
+#!/bin/bash
 # Compile Meson with the following command:
 
 python3 setup.py build

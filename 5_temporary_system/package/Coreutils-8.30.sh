@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Coreutils for compilation:
 
 ./configure --prefix=/tools --enable-install-program=hostname

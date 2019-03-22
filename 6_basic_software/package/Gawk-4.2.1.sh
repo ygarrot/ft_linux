@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, ensure some unneeded files are not installed:
 
 sed -i 's/extras//' Makefile.in

@@ -1,3 +1,4 @@
+#!/bin/bash
 # First create a basic /etc/hosts file to be referenced in one of Perl's configuration files as well as the optional test suite:
 
 echo "127.0.0.1 localhost $(hostname)" > /etc/hosts

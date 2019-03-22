@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Acl for compilation:
 
 ./configure --prefix=/usr         \

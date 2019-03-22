@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare XML::Parser for compilation:
 
 perl Makefile.PL

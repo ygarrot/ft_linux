@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/bin/bash
 SOURCES=$LFS/sources
 
 SECOND_COMPIL=(

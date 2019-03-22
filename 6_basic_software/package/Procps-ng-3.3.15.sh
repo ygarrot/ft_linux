@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare procps-ng for compilation:
 
 ./configure --prefix=/usr                            \

@@ -1,3 +1,4 @@
+#!/bin/bash
 # The behaviour of the Backspace and Delete keys is not consistent across the keymaps in the Kbd package. The following patch fixes this issue for i386 keymaps:
 
 patch -Np1 -i ../kbd-2.0.4-backspace-1.patch

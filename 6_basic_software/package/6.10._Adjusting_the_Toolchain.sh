@@ -1,3 +1,4 @@
+#!/bin/bash
 # Now that the final C libraries have been installed, it is time to adjust the toolchain so that it will link any newly compiled program against these new libraries.
 
 # First, backup the /tools linker, and replace it with the adjusted linker we made in chapter 5. We'll also create a link to its counterpart in /tools/$(uname -m)-pc-linux-gnu/bin:

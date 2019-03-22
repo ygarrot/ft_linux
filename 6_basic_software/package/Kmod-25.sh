@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Kmod for compilation:
 
 ./configure --prefix=/usr          \

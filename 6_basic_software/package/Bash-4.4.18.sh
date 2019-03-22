@@ -1,3 +1,4 @@
+#!/bin/bash
 #WARNING
 # Prepare Bash for compilation:
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 # 4.2. Creating the $LFS/tools Directory
 # All programs compiled in Chapter 5 will be installed under $LFS/tools to keep them separate from the programs compiled in Chapter 6. The programs compiled here are temporary tools and will not be a part of the final LFS system. By keeping these programs in a separate directory, they can easily be discarded later after their use. This also prevents these programs from ending up in the host production directories (easy to do by accident in Chapter 5).
 

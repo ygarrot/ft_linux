@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, fix a problem introduced with glibc-2.26:
 
 sed -i "/math.h/a #include <malloc.h>" src/flexdef.h

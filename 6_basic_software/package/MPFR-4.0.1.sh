@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare MPFR for compilation:
 
 ./configure --prefix=/usr        \

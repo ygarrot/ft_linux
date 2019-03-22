@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Grep for compilation:
 
 ./configure --prefix=/tools

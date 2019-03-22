@@ -1,3 +1,4 @@
+#!/bin/bash
 # Fix a file that creates a lot of failures in the regression checks:
 
 sed -i '5481,5485 s/({/(\\{/' tp/Texinfo/Parser.pm

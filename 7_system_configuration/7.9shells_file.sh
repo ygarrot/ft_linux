@@ -1,3 +1,4 @@
+#!/bin/bash
 # The shells file contains a list of login shells on the system. Applications use this file to determine whether a shell is valid. For each shell a single line should be present, consisting of the shell's path, relative to the root of the directory structure (/).
 
 # For example, this file is consulted by chsh to determine whether an unprivileged user may change the login shell for her own account. If the command name is not listed, the user will be denied of change.

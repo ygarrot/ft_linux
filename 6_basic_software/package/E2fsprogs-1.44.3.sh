@@ -1,3 +1,4 @@
+#!/bin/bash
 # The E2fsprogs documentation recommends that the package be built in a subdirectory of the source tree:
 
 mkdir -v build

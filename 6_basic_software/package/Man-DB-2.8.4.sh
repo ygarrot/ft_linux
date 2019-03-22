@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Man-DB for compilation:
 
 ./configure --prefix=/usr                        \

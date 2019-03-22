@@ -1,3 +1,4 @@
+#!/bin/bash
 # # Note
 # The Glibc build system is self-contained and will install perfectly, even though the compiler specs file and linker are still pointing to /tools. The specs and linker cannot be adjusted before the Glibc install because the Glibc autoconf tests would give false results and defeat the goal of achieving a clean build.
 

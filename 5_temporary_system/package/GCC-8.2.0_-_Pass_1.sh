@@ -1,3 +1,4 @@
+#!/bin/bash
 # GCC now requires the GMP, MPFR and MPC packages. As these packages may not be included in your host distribution, they will be built with GCC. Unpack each package into the GCC source directory and rename the resulting directories so the GCC build procedures will automatically use them:
 
 # [Note] Note

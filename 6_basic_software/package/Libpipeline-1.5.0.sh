@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Libpipeline for compilation:
 
 ./configure --prefix=/usr

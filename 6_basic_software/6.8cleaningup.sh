@@ -1,3 +1,4 @@
+#!/bin/bash
 # Finally, clean up some extra files left around from running tests:
 
 rm -rf /tmp/*

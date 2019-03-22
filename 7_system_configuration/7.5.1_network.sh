@@ -1,3 +1,4 @@
+#!/bin/bash
 # 7.5.1. Creating Network Interface Configuration Files
 # Which interfaces are brought up and down by the network script usually depends on the files in /etc/sysconfig/. This directory should contain a file for each interface to be configured, such as ifconfig.xyz, where “xyz” should describe the network card. The interface name (e.g. eth0) is usually appropriate. Inside this file are attributes to this interface, such as its IP address(es), subnet masks, and so forth. It is necessary that the stem of the filename be ifconfig.
 

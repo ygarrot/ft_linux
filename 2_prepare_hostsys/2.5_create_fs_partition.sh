@@ -1,3 +1,4 @@
+#!/bin/bash
 # Now that a blank partition has been set up, the file system can be created. LFS can use any file system recognized by the Linux kernel, but the most common types are ext3 and ext4. The choice of file system can be complex and depends on the characteristics of the files and the size of the partition. For example:
 
 # ext2

@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, force Expect's configure script to use /bin/stty instead of a /usr/local/bin/stty it may find on the host system. This will ensure that our test suite tools remain sane for the final builds of our toolchain:
 
 cp -v configure{,.orig}

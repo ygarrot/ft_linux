@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Less for compilation:
 
 ./configure --prefix=/usr --sysconfdir=/etc

@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Bash for compilation:
 
 ./configure --prefix=/tools --without-bash-malloc

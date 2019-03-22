@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Texinfo for compilation:
 
 ./configure --prefix=/tools

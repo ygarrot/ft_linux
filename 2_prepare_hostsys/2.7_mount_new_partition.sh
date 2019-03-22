@@ -1,3 +1,4 @@
+#!/bin/bash
 # Now that a file system has been created, the partition needs to be made accessible. In order to do this, the partition needs to be mounted at a chosen mount point. For the purposes of this book, it is assumed that the file system is mounted under the directory specified by the LFS environment variable as described in the previous section.
 
 # Create the mount point and mount the LFS file system by running:

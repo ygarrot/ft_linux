@@ -1,3 +1,4 @@
+#!/bin/bash
 # First fix a warning that is caused by perl-5.22 and later:
 
 sed -i 's:\\\${:\\\$\\{:' intltool-update.in

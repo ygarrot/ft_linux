@@ -1,3 +1,4 @@
+#!/bin/bash
 # First fix an issue in the LFS environment and remove a failing test:
 
 sed -i 's/usr/tools/'                 build-aux/help2man

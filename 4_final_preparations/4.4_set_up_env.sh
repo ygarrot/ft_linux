@@ -1,3 +1,4 @@
+#!/bin/bash
 # 4.4. Setting Up the Environment
 # Set up a good working environment by creating two new startup files for the bash shell. While logged in as user lfs, issue the following command to create a new .bash_profile:
 

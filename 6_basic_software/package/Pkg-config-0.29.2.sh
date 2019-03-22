@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Pkg-config for compilation:
 
 ./configure --prefix=/usr              \

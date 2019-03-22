@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare MPC for compilation:
 
 ./configure --prefix=/usr    \

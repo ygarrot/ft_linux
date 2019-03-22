@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Perl for compilation:
 
 sh Configure -des -Dprefix=/tools -Dlibs=-lm -Uloclibpth -Ulocincpth

@@ -1,3 +1,4 @@
+#!/bin/bash
 # [Note] Note
 # The commands in the remainder of this book must be performed while logged in as user root and no longer as user lfs. Also, double check that $LFS is set in root's environment.
 

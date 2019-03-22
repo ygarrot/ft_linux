@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Autoconf for compilation:
 
 ./configure --prefix=/usr

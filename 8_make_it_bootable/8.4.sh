@@ -1,3 +1,4 @@
+#!/bin/bash
 # 8.4. Using GRUB to Set Up the Boot Process
 # 8.4.1. Introduction
 # [Warning] Warning

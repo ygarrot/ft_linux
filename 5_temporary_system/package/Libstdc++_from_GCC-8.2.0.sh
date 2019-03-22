@@ -1,3 +1,4 @@
+#!/bin/bash
 # [Note] Note
 # Libstdc++ is part of the GCC sources. You should first unpack the GCC tarball and change to the gcc-8.2.0 directory.
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 # 8.3.1. Installation of the kernel
 # Building the kernel involves a few steps—configuration, compilation, and installation. Read the README file in the kernel source tree for alternative methods to the way this book configures the kernel.
 

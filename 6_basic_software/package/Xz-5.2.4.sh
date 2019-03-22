@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Xz for compilation with:
 
 ./configure --prefix=/usr    \

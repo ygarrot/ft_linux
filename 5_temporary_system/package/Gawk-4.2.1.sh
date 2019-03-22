@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Gawk for compilation:
 
 ./configure --prefix=/tools

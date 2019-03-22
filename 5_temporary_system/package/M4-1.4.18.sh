@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, make some fixes required by glibc-2.28:
 
 sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c

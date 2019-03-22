@@ -1,3 +1,4 @@
+#!/bin/bash
 # The steps in this section are optional, but if the LFS partition is rather small, it is beneficial to learn that unnecessary items can be removed. The executables and libraries built so far contain about 70 MB of unneeded debugging symbols. Remove those symbols with:
 
 strip --strip-debug /tools/lib/*

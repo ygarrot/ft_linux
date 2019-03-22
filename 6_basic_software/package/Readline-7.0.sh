@@ -1,3 +1,4 @@
+#!/bin/bash
 # Reinstalling Readline will cause the old libraries to be moved to <libraryname>.old. While this is normally not a problem, in some cases it can trigger a linking bug in ldconfig. This can be avoided by issuing the following two seds:
 
 sed -i '/MV.*old/d' Makefile.in

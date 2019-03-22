@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, suppress two invocations of test-lock which on some machines can loop forever:
 
 sed -i '/^TESTS =/d' gettext-runtime/tests/Makefile.in &&

@@ -1,3 +1,4 @@
+#!/bin/bash
 # The Glibc documentation recommends building Glibc in a dedicated build directory:
 
 mkdir -v build

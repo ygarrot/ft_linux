@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Attr for compilation:
 
 ./configure --prefix=/usr     \

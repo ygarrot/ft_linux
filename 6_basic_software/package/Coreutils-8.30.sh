@@ -1,3 +1,4 @@
+#!/bin/bash
 # POSIX requires that programs from Coreutils recognize character boundaries correctly even in multibyte locales. The following patch fixes this non-compliance and other internationalization-related bugs.
 
 patch -Np1 -i ../coreutils-8.30-i18n-1.patch

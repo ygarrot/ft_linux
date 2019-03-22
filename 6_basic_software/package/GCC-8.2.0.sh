@@ -1,3 +1,4 @@
+#!/bin/bash
 # If building on x86_64, change the default directory name for 64-bit libraries to “lib”:
 
 case $(uname -m) in

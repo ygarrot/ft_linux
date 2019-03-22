@@ -1,3 +1,4 @@
+#!/bin/bash
 # Now that all of the software has been installed, it is time to reboot your computer. However, you should be aware of a few things. The system you have created in this book is quite minimal, and most likely will not have the functionality you would need to be able to continue forward. By installing a few extra packages from the BLFS book while still in our current chroot environment, you can leave yourself in a much better position to continue on once you reboot into your new LFS installation. Here are some suggestions:
 
 # A text mode browser such as Lynx will allow you to easily view the BLFS book in one virtual terminal, while building packages in another.

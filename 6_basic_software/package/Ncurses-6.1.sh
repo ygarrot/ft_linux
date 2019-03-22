@@ -1,3 +1,4 @@
+#!/bin/bash
 # Don't install a static library that is not handled by configure:
 
 sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in

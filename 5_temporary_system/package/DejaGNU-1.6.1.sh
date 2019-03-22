@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare DejaGNU for compilation:
 
 ./configure --prefix=/tools

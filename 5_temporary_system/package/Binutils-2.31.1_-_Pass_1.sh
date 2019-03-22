@@ -1,3 +1,4 @@
+#!/bin/bash
 # [Note] Note
 # Go back and re-read the notes in the previous section. Understanding the notes labeled important will save you a lot of problems later.
 

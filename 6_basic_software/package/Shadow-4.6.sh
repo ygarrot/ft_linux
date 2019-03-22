@@ -1,3 +1,4 @@
+#!/bin/bash
 # [Note] Note
 # # If you would like to enforce the use of strong passwords, refer to http://www.linuxfromscratch.org/blfs/view/8.3/postlfs/cracklib.html for installing CrackLib prior to building Shadow. Then add --with-libcrack to the configure command below.
 

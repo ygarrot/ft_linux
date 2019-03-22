@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, work around an error caused by glibc-2.27:
 
 sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c

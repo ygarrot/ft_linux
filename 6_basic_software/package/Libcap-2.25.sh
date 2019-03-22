@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prevent a static library from being installed:
 
 sed -i '/install.*STALIBNAME/d' libcap/Makefile

@@ -1,3 +1,4 @@
+#!/bin/bash
 #re Util-linux for compilation:
 
 ./configure --prefix=/tools                \

@@ -1,3 +1,4 @@
+#!/bin/bash
 # The Linux kernel needs to expose an Application Programming Interface (API) for the system's C library (Glibc in LFS) to use. This is done by way of sanitizing various C header files that are shipped in the Linux kernel source tarball.
 
 # Make sure there are no stale files and dependencies lying around from previous activity:

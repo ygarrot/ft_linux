@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, ensure that gawk is found first during configuration:
 
 sed -i s/mawk// configure

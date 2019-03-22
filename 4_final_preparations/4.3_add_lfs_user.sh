@@ -1,3 +1,4 @@
+#!/bin/bash
 # When logged in as user root, making a single mistake can damage or destroy a system. Therefore, we recommend building the packages in this chapter as an unprivileged user. You could use your own user name, but to make it easier to set up a clean working environment, create a new user called lfs as a member of a new group (also named lfs) and use this user during the installation process. As root, issue the following commands to add the new user:
 
 groupadd lfs

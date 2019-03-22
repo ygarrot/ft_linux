@@ -1,3 +1,4 @@
+#!/bin/bash
 # [Note] Note
 # If you are building for 32-bit x86, but you have a CPU which is capable of running 64-bit code and you have specified CFLAGS in the environment, the configure script will attempt to configure for 64-bits and fail. Avoid this by invoking the configure command below with
 

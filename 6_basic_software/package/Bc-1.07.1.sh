@@ -1,3 +1,4 @@
+#!/bin/bash
 # First, change an internal script to use sed instead of ed:
 
 cat > bc/fix-libmath_h << "EOF"

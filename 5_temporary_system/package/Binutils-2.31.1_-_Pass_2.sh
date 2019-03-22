@@ -1,3 +1,4 @@
+#!/bin/bash
 # Create a separate build directory again:
 
 mkdir -v build

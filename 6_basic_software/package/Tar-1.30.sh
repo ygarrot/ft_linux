@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Tar for compilation:
 
 FORCE_UNSAFE_CONFIGURE=1  \

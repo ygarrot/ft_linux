@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Inetutils for compilation:
 
 ./configure --prefix=/usr        \

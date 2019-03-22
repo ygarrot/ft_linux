@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Psmisc for compilation:
 
 ./configure --prefix=/usr

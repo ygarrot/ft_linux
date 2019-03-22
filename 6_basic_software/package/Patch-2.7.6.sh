@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Patch for compilation:
 
 ./configure --prefix=/usr

@@ -1,3 +1,4 @@
+#!/bin/bash
 #warning
 # The /etc/fstab file is used by some programs to determine where file systems are to be mounted by default, in which order, and which must be checked (for integrity errors) prior to mounting. Create a new file systems table like this:
 

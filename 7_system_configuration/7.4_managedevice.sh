@@ -1,3 +1,4 @@
+#!/bin/bash
 
 
 # In the new naming scheme, typical network device names would then be something like enp5s0 or wlp3s0. If this naming convention is not desired, the traditional naming scheme or a custom scheme can be implemented.

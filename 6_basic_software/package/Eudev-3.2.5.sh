@@ -1,3 +1,4 @@
+#!/bin/bash
 # Next, add a workaround to prevent the /tools directory from being hard coded into Eudev binary files library locations:
 
 cat > config.cache << "EOF"

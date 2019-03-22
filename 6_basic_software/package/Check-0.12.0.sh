@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare Check for compilation:
 
 ./configure --prefix=/usr

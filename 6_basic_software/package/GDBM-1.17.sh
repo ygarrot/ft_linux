@@ -1,3 +1,4 @@
+#!/bin/bash
 # Prepare GDBM for compilation:
 
 ./configure --prefix=/usr \

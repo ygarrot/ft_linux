@@ -1,3 +1,4 @@
+#!/bin/bash
 # Apply a patch that will install the documentation for this package:
 
 patch -Np1 -i ../bzip2-1.0.6-install_docs-1.patch
