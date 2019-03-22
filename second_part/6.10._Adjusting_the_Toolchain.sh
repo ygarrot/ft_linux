@@ -47,8 +47,8 @@ grep -B1 '^ /usr/include' dummy.log
 grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
 # References to paths that have components with '-linux-gnu' should be ignored, but otherwise the output of the last command should be:
 
-SEARCH_DIR("/usr/lib")
-SEARCH_DIR("/lib")
+# SEARCH_DIR("/usr/lib")
+# SEARCH_DIR("/lib")
 # Next make sure that we're using the correct libc:
 
 grep "/lib.*/libc.so.6 " dummy.log

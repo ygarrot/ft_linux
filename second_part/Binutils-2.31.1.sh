@@ -3,7 +3,7 @@
 expect -c "spawn ls"
 # This command should output the following:
 
-spawn ls
+# spawn ls
 # If, instead, the output includes the message below, then the environment is not set up for proper PTY operation. This issue needs to be resolved before running the test suites for Binutils and GCC:
 
 # The system has no more ptys.
