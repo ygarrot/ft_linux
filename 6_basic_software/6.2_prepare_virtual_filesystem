@@ -3,7 +3,7 @@
 # Begin by creating directories onto which the file systems will be mounted:
 
 mkdir -pv $LFS/{dev,proc,sys,run}
-6.2.1. Creating Initial Device Nodes
+# 6.2.1. Creating Initial Device Nodes
 # When the kernel boots the system, it requires the presence of a few device nodes, in particular the console and null devices. The device nodes must be created on the hard disk so that they are available before udevd has been started, and additionally when Linux is started with init=/bin/bash. Create the devices by running the following commands:
 
 mknod -m 600 $LFS/dev/console c 5 1
@@ -21,10 +21,10 @@ mount -vt sysfs sysfs $LFS/sys
 mount -vt tmpfs tmpfs $LFS/run
 # The meaning of the mount options for devpts:
 
-gid=5
-# This ensures that all devpts-created device nodes are owned by group ID 5. This is the ID we will use later on for the tty group. We use the group ID instead of a name, since the host system might use a different ID for its tty group.
+# gid=5
+# # This ensures that all devpts-created device nodes are owned by group ID 5. This is the ID we will use later on for the tty group. We use the group ID instead of a name, since the host system might use a different ID for its tty group.
 
-mode=0620
+# mode=0620
 # This ensures that all devpts-created device nodes have mode 0620 (user readable and writable, group writable). Together with the option above, this ensures that devpts will create device nodes that meet the requirements of grantpt(), meaning the Glibc pt_chown helper binary (which is not installed by default) is not necessary.
 
 # In some host systems, /dev/shm is a symbolic link to /run/shm. The /run tmpfs was mounted above so in this case only a directory needs to be created.

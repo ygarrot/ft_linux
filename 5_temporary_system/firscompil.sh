@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 SOURCES=`pwd`
 PART5=$SOURCES/ft_linux/5_temporary_system/package
 
