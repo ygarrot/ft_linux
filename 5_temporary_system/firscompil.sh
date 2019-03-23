@@ -37,16 +37,17 @@ FIRST_COMPIL=(
 "Xz-5.2.4.sh:xz-5.2.4.tar.xz"
 )
 
+rm script_dones
 for package in "${FIRST_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"
 	FOLDER=${TAR%.*.*}
-	# echo $SCRIPT = $TAR
 	# VERSION=${SCRIPT##*-}
 	# PACKAGE=${SCRIPT%-*}
 	tar -xf $TAR
 	cd $FOLDER
 	sh $PART5/$SCRIPT
 	cd $SOURCES
+	echo $SCRIPT = $TAR >> script_dones
 	rm -rf $FOLDER
 done
