@@ -1,6 +1,6 @@
 #!/bin/bash
 SOURCES=`pwd`
-PART5=$SOURCES/ft_linux/5_temporary_system/package
+PART6=$SOURCES/ft_linux/6_basic_software/package
 
 SECOND_COMPIL=(
 "Linux-4.18.5_API_Headers.sh:linux-4.18.5.tar.xz"
@@ -84,7 +84,7 @@ for package in "${SECOND_COMPIL[@]}" ; do
 	# PACKAGE=${SCRIPT%-*}
 	tar -xf $TAR
 	cd $FOLDER
-	sh $PART5/$SCRIPT
+	sh $PART6/$SCRIPT
 	cd $SOURCES
 	echo $SCRIPT = $TAR >> script_dones
 	rm -rf $FOLDER
