@@ -1,6 +1,7 @@
 #!/bin/bash
 #!/bin/bash
-SOURCES=$LFS/sources
+SOURCES=`pwd`
+PART5=$SOURCES/ft_linux/5_temporary_system/package
 
 FIRST_COMPIL=(
 "Binutils-2.31.1_-_Pass_1.sh:binutils-2.31.1.tar.xz"
@@ -40,11 +41,12 @@ for package in "${FIRST_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"
 	FOLDER=${TAR%.*.*}
-	echo $SCRIPT = $TAR
+	# echo $SCRIPT = $TAR
 	# VERSION=${SCRIPT##*-}
 	# PACKAGE=${SCRIPT%-*}
-	# tar -xf $TAR
-	# cd $FOLDER
-	# sh $SCRIPT
-	# rm -rf $FOLDER
+	tar -xf $TAR
+	cd $FOLDER
+	sh $PART5/$SCRIPT
+	cd $SOURCES
+	rm -rf $FOLDER
 done
