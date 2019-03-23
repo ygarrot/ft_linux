@@ -33,23 +33,23 @@ readelf -l a.out | grep ': /lib'
 grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
 # The output of the last command should be:
 
-/usr/lib/../lib/crt1.o succeeded
-/usr/lib/../lib/crti.o succeeded
-/usr/lib/../lib/crtn.o succeeded
+# /usr/lib/../lib/crt1.o succeeded
+# /usr/lib/../lib/crti.o succeeded
+# /usr/lib/../lib/crtn.o succeeded
 # Verify that the compiler is searching for the correct header files:
 
 grep -B1 '^ /usr/include' dummy.log
 # This command should return the following output:
 
 #include <...> search starts here:
- /usr/include
+ # /usr/include
 # Next, verify that the new linker is being used with the correct search paths:
 
 grep 'SEARCH.*/usr/lib' dummy.log |sed 's|; |\n|g'
 # References to paths that have components with '-linux-gnu' should be ignored, but otherwise the output of the last command should be:
 
-SEARCH_DIR("/usr/lib")
-SEARCH_DIR("/lib")
+# SEARCH_DIR("/usr/lib")
+# SEARCH_DIR("/lib")
 # Next make sure that we're using the correct libc:
 
 grep "/lib.*/libc.so.6 " dummy.log
