@@ -32,9 +32,9 @@ make
 # [Warning] Warning
 # Running the test suite as the root user can be harmful to your system. To run it, the CONFIG_SCSI_DEBUG option for the kernel must be available in the currently running system, and must be built as a module. Building it into the kernel will prevent booting. For complete coverage, other BLFS packages must be installed. If desired, this test can be run after rebooting into the completed LFS system and running:
 
-bash tests/run.sh --srcdir=$PWD --builddir=$PWD
-chown -Rv nobody .
-su nobody -s /bin/bash -c "PATH=$PATH make -k check"
+# bash tests/run.sh --srcdir=$PWD --builddir=$PWD
+# chown -Rv nobody .
+# su nobody -s /bin/bash -c "PATH=$PATH make -k check"
 # Install the package:
 
 make install
