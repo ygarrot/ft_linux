@@ -41,12 +41,12 @@ for package in "${FIRST_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"
 	FOLDER=${TAR%.*.*}
-	# echo $SCRIPT = $TAR
 	# VERSION=${SCRIPT##*-}
 	# PACKAGE=${SCRIPT%-*}
 	tar -xf $TAR
 	cd $FOLDER
 	sh $PART5/$SCRIPT
 	cd $SOURCES
+	echo $SCRIPT = $TAR >> script_dones
 	rm -rf $FOLDER
 done
