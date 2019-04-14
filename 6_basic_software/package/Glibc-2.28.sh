@@ -158,7 +158,7 @@ for tz in etcetera southamerica northamerica europe africa antarctica  \
 done
 
 cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
-zic -d $ZONEINFO -p America/New_York
+zic -d $ZONEINFO -p Europe/Paris
 unset ZONEINFO
 # The meaning of the zic commands:
 
@@ -178,7 +178,7 @@ tzselect
 
 # Then create the /etc/localtime file by running:
 
-cp -v /usr/share/zoneinfo/<xxx> /etc/localtime
+cp -v /usr/share/zoneinfo/Europe/Paris /etc/localtime
 # cp -v /usr/share/zoneinfo/<xxx> /etc/localtime
 # Replace <xxx> with the name of the time zone selected (e.g., Canada/Eastern).
 

@@ -15,7 +15,7 @@ sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c
 make
 # Compilation is now complete. As discussed earlier, running the test suite is not mandatory for the temporary tools here in this chapter. To run the Make test suite anyway, issue the following command:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

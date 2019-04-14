@@ -7,4 +7,4 @@
 make install
 # To test the results, issue:
 
-make check
+[ "$TESTING" == "True" ] && make check

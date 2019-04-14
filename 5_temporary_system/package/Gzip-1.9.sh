@@ -11,7 +11,7 @@ echo "#define _IO_IN_BACKUP 0x100" >> lib/stdio-impl.h
 make
 # Compilation is now complete. As discussed earlier, running the test suite is not mandatory for the temporary tools here in this chapter. To run the Gzip test suite anyway, issue the following command:
 
-make check
+[ "$TESTING" == "True" ] && make check
 # Install the package:
 
 make install

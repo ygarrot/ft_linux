@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 SOURCES=`pwd`
 PART5=$SOURCES/ft_linux/5_temporary_system/package
 
@@ -37,6 +36,7 @@ FIRST_COMPIL=(
 "Xz-5.2.4.sh:xz-5.2.4.tar.xz"
 )
 
+rm script_dones
 for package in "${FIRST_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"

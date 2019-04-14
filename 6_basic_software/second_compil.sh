@@ -1,6 +1,6 @@
 #!/bin/bash
-#!/bin/bash
-SOURCES=$LFS/sources
+SOURCES=`pwd`
+PART6=$SOURCES/ft_linux/6_basic_software/package
 
 SECOND_COMPIL=(
 "Linux-4.18.5_API_Headers.sh:linux-4.18.5.tar.xz"
@@ -75,15 +75,17 @@ SECOND_COMPIL=(
 "Vim-8.1.sh:vim-8.1.tar.bz2"
 )
 
+rm script_dones
 for package in "${SECOND_COMPIL[@]}" ; do
 	TAR="${package##*:}"
 	SCRIPT="${package%%:*}"
 	FOLDER=${TAR%.*.*}
-	echo $SCRIPT = $TAR
 	# VERSION=${SCRIPT##*-}
 	# PACKAGE=${SCRIPT%-*}
-	# tar -xf $TAR
-	# cd $FOLDER
-	# sh $SCRIPT
-	# rm -rf $FOLDER
+	tar -xf $TAR
+	cd $FOLDER
+	sh $PART6/$SCRIPT
+	cd $SOURCES
+	echo $SCRIPT = $TAR >> script_dones
+	rm -rf $FOLDER
 done
