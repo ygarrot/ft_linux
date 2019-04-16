@@ -8,9 +8,9 @@
 # 	The following command creates a sample file for the eth0 device with a static IP address:
 
 cd /etc/sysconfig/
-cat > ifconfig.eth0 << "EOF"
+cat > ifconfig.enp0s3 << "EOF"
 ONBOOT=yes
-IFACE=eth0
+IFACE=enp0s3
 SERVICE=ipv4-static
 IP=192.168.1.2
 GATEWAY=192.168.1.1
