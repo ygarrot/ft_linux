@@ -1,10 +1,10 @@
 #!/bin/bash
 # Finally, clean up some extra files left around from running tests:
 
-rm -rf /tmp/*
+#rm -rf /tmp/*
 # Now log out and reenter the chroot environment with an updated chroot command. From now on, use this updated chroot command any time you need to reenter the chroot environment after exiting:
 
-logout
+#logout
 
 chroot "$LFS" /usr/bin/env -i          \
 	HOME=/root TERM="$TERM"            \
@@ -20,13 +20,13 @@ chroot "$LFS" /usr/bin/env -i          \
 
 # There were several static libraries that were not suppressed earlier in the chapter in order to satisfy the regression tests in several packages. These libraries are from binutils, bzip2, e2fsprogs, flex, libtool, and zlib. If desired, remove them now:
 
-rm -f /usr/lib/lib{bfd,opcodes}.a
-rm -f /usr/lib/libbz2.a
-rm -f /usr/lib/lib{com_err,e2p,ext2fs,ss}.a
-rm -f /usr/lib/libltdl.a
-rm -f /usr/lib/libfl.a
-rm -f /usr/lib/libz.a
-# There are also several files installed in the /usr/lib and /usr/libexec directories with a file name extention of .la. These are "libtool archive" files and generally unneeded on a linux system. None of these are necessary at this point. To remove them, run:
+#rm -f /usr/lib/lib{bfd,opcodes}.a
+#rm -f /usr/lib/libbz2.a
+#rm -f /usr/lib/lib{com_err,e2p,ext2fs,ss}.a
+#rm -f /usr/lib/libltdl.a
+#rm -f /usr/lib/libfl.a
+#rm -f /usr/lib/libz.a
+## There are also several files installed in the /usr/lib and /usr/libexec directories with a file name extention of .la. These are "libtool archive" files and generally unneeded on a linux system. None of these are necessary at this point. To remove them, run:
 
-find /usr/lib /usr/libexec -name \*.la -delete
+#find /usr/lib /usr/libexec -name \*.la -delete
 # For more information about libtool archive files, see the BLFS section "About Libtool Archive (.la) files".
