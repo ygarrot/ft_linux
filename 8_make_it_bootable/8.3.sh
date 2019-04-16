@@ -4,7 +4,7 @@
 
 # Prepare for compilation by running the following command:
 
-make mrproper
+#make mrproper
 # This ensures that the kernel tree is absolutely clean. The kernel team recommends that this command be issued prior to each kernel compilation. Do not rely on the source tree being clean after un-tarring.
 
 # Configure the kernel via a menu-driven interface. For general information on kernel configuration see http://www.linuxfromscratch.org/hints/downloads/files/kernel-configuration.txt. BLFS has some information regarding particular kernel configuration requirements of packages outside of LFS at http://www.linuxfromscratch.org/blfs/view/8.3/longindex.html#kernel-config-index. Additional information about configuring and building the kernel can be found at http://www.kroah.com/lkn/
@@ -40,7 +40,7 @@ make mrproper
 # 	Maintain a devtmpfs
 # 	This will create automated device nodes which are populated by the kernel, even without Udev running. Udev then runs on top of this, managing permissions and adding symlinks. This configuration item is required for all users of Udev/Eudev.
 
-make menuconfig
+#make menuconfig
 # 	The meaning of optional make environment variables:
 
 # LANG=<host_LANG_value> LC_ALL=
@@ -54,18 +54,18 @@ make menuconfig
 
 # 		Compile the kernel image and modules:
 
-make
+#make
 # 		If using kernel modules, module configuration in /etc/modprobe.d may be required. Information pertaining to modules and kernel configuration is located in Section 7.3, “Overview of Device and Module Handling” and in the kernel documentation in the linux-4.18.5/Documentation directory. Also, modprobe.d(5) may be of interest.
 
 # 			Install the modules, if the kernel configuration uses them:
 
-make modules_install
+#make modules_install
 # 			After kernel compilation is complete, additional steps are required to complete the installation. Some files need to be copied to the /boot directory.
 
 # 			[Caution] Caution
 # 			If the host system has a separate /boot partition, the files copied below should go there. The easiest way to do that is to bind /boot on the host (outside chroot) to /mnt/lfs/boot before proceeding. As the root user in the host system:
 
-mount --bind /boot /mnt/lfs/boot
+#mount --bind /boot /mnt/lfs/boot
 # The path to the kernel image may vary depending on the platform being used. The filename below can be changed to suit your taste, but the stem of the filename should be vmlinuz to be compatible with the automatic setup of the boot process described in the next section. The following command assumes an x86 architecture:
 
 cp -iv arch/x86/boot/bzImage /boot/vmlinuz-4.18.5-lfs-8.3

@@ -6,9 +6,9 @@
 
 # Ensure that an emergency boot disk is ready to “rescue” the computer if the computer becomes unusable (un-bootable). If you do not already have a boot device, you can create one. In order for the procedure below to work, you need to jump ahead to BLFS and install xorriso from the libisoburn package.
 
-cd /tmp 
-grub-mkrescue --output=grub-img.iso 
-xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso
+#cd /tmp 
+#grub-mkrescue --output=grub-img.iso 
+#xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso
 # [Note] Note
 # To boot LFS on host systems that have UEFI enabled, the kernel needs to have been built with the CONFIG_EFI_STUB capabality described in the previous section. However, LFS can be booted using GRUB2 without such an addition. To do this, the UEFI Mode and Secure Boot capabilities in the host system's BIOS need to be turned off. For details, see the lfs-uefi.txt hint at http://www.linuxfromscratch.org/hints/downloads/files/lfs-uefi.txt.
 
@@ -39,12 +39,12 @@ set default=0
 set timeout=5
 
 insmod ext2
-set root=(hd0,2)
+set root=(hd1,1)
 
-menuentry "GNU/Linux, Linux 4.18.5-lfs-8.3" {
-linux   /boot/vmlinuz-4.18.5-lfs-8.3 root=/dev/sda2 ro
-	}
-	EOF
+menuentry "GNU/Linux, Linux 4.18.5-ygarrot" {
+linux   vmlinuz-4.18.5-lfs-8.3 root=/dev/sdb3 ro
+}
+EOF
 # [Note] Note
 # From GRUB's perspective, the kernel files are relative to the partition used. If you used a separate /boot partition, remove /boot from the above linux line. You will also need to change the set root line to point to the boot partition.
 

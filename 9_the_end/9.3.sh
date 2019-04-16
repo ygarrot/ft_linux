@@ -43,7 +43,7 @@
 
 # 			Now that we have said that, let's move on to booting our shiny new LFS installation for the first time! First exit from the chroot environment:
 
-logout
+#logout
 # Then unmount the virtual file systems:
 
 umount -v $LFS/dev/pts
@@ -51,7 +51,7 @@ umount -v $LFS/dev
 umount -v $LFS/run
 umount -v $LFS/proc
 umount -v $LFS/sys
-Unmount the LFS file system itself:
+#Unmount the LFS file system itself:
 
 umount -v $LFS
 # If multiple partitions were created, unmount the other partitions before unmounting the main one, like this:

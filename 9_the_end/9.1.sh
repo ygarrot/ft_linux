@@ -9,7 +9,7 @@ echo 8.3 > /etc/lfs-release
 cat > /etc/lsb-release << "EOF"
 DISTRIB_ID="Linux From Scratch"
 DISTRIB_RELEASE="8.3"
-DISTRIB_CODENAME="<your name here>"
+DISTRIB_CODENAME="ygarrot"
 DISTRIB_DESCRIPTION="Linux From Scratch"
 EOF
 # Be sure to put some sort of customization for the field 'DISTRIB_CODENAME' to make the system uniquely yours.
