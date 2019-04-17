@@ -68,7 +68,7 @@
 #mount --bind /boot /mnt/lfs/boot
 # The path to the kernel image may vary depending on the platform being used. The filename below can be changed to suit your taste, but the stem of the filename should be vmlinuz to be compatible with the automatic setup of the boot process described in the next section. The following command assumes an x86 architecture:
 
-cp -iv arch/x86/boot/bzImage /boot/vmlinuz-4.18.5-lfs-8.3
+cp -iv arch/x86/boot/bzImage /boot/vmlinuz-4.18.5-ygarrot
 # System.map is a symbol file for the kernel. It maps the function entry points of every function in the kernel API, as well as the addresses of the kernel data structures for the running kernel. It is used as a resource when investigating kernel problems. Issue the following command to install the map file:
 
 cp -iv System.map /boot/System.map-4.18.5
