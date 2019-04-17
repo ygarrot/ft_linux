@@ -1,4 +1,6 @@
 #mount -v -t ext4 /dev/sdb3 $LFS
+mkswap /dev/sdb2
+swapon /dev/sdb2
 mount -v -t ext4 /dev/home $LFS/home
 mount -v -t ext4 /dev/sdb1 $LFS/boot
 mount -v --bind /dev $LFS/dev
