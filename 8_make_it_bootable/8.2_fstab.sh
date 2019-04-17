@@ -24,17 +24,17 @@ EOF
 
 # Filesystems with MS-DOS or Windows origin (i.e. vfat, ntfs, smbfs, cifs, iso9660, udf) need a special option, utf8, in order for non-ASCII characters in file names to be interpreted properly. For non-UTF-8 locales, the value of iocharset should be set to be the same as the character set of the locale, adjusted in such a way that the kernel understands it. This works if the relevant character set definition (found under File systems -> Native Language Support when configuring the kernel) has been compiled into the kernel or built as a module. However, if the character set of the locale is UTF-8, the corresponding option iocharset=utf8 would make the file system case sensitive. To fix this, use the special option utf8 instead of iocharset=utf8, for UTF-8 locales. The “codepage” option is also needed for vfat and smbfs filesystems. It should be set to the codepage number used under MS-DOS in your country. For example, in order to mount USB flash drives, a ru_RU.KOI8-R user would need the following in the options portion of its mount line in /etc/fstab:
 
-noauto,user,quiet,showexec,codepage=866ocharset=koi8r
+#noauto,user,quiet,showexec,codepage=866ocharset=koi8r
 # The corresponding options fragment for ru_RU.UTF-8 users is:
 
-noauto,user,quietʃowexec,codepage=866,utf8
+#noauto,user,quietʃowexec,codepage=866,utf8
 # Note that using iocharset is the default for iso8859-1 (which keeps the file system case insensitive), and the utf8 option tells the kernel to convert the file names using UTF-8 so they can be interpreted in the UTF-8 locale.
 
 # It is also possible to specify default codepage and iocharset values for some filesystems during kernel configuration. The relevant parameters are named “Default NLS Option” (CONFIG_NLS_DEFAULT), “Default Remote NLS Option” (CONFIG_SMB_NLS_DEFAULT), “Default codepage for FAT” (CONFIG_FAT_DEFAULT_CODEPAGE), and “Default iocharset for FAT” (CONFIG_FAT_DEFAULT_IOCHARSET). There is no way to specify these settings for the ntfs filesystem at kernel compilation time.
 
 # It is possible to make the ext3 filesystem reliable across power failures for some hard disk types. To do this, add the barrier=1 mount option to the appropriate entry in /etc/fstab. To check if the disk drive supports this option, run hdparm on the applicable disk drive. For example, if:
 
-hdparm -I /dev/sda | grep NCQ
+#hdparm -I /dev/sda | grep NCQ
 # returns non-empty output, the option is supported.
 
 # Note: Logical Volume Management (LVM) based partitions cannot use the barrier option.

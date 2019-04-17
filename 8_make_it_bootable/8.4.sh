@@ -42,7 +42,7 @@ insmod ext2
 set root=(hd1,1)
 
 menuentry "GNU/Linux, Linux 4.18.5-ygarrot" {
-linux   vmlinuz-4.18.5-lfs-8.3 root=/dev/sdb3 ro
+linux   vmlinuz-4.18.5-ygarrot root=/dev/sdb3 ro
 }
 EOF
 # [Note] Note
